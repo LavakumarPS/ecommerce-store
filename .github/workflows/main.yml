@@ -1,0 +1,20 @@
+name: ecommerce-ci-pipeline
+run-name: ${{ github.actor }} is owner of this repo
+on: 
+ push:
+   branches:
+     - '*'
+ pull_request:
+  types: [opened,created]
+jobs: 
+   lint:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v3
+      - name: Run lint
+      - run: |
+               npm run lint
+               echo "Build Succes"
+        
+
