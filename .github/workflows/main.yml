@@ -11,9 +11,9 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - name: Checkout Code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Run lint
-      - run: |
+        run: |
                npm run lint
                echo "Build Succes"
         
